@@ -1,0 +1,47 @@
+<div class="sales">
+  <section id="slide">
+    <div class="container-slide">
+      <!-- <div class="delete"></div> -->
+      <!-- <img src="https://file.hstatic.net/1000129940/collection/phim_custom_d94c52e03fe74d09a0042099d5d9dafb.jpg">
+      <img src="https://m.media-amazon.com/images/I/61+O1VNp1-L._AC_SY450_.jpg">
+      <img src="../../../assets/photo/wallhaven-lqvmrl_2560x1080.png"> -->
+      <img src="../../../assets/photo/wallhaven-ey5rzr_1600x400.png">
+      <!-- <img src="https://i1-sohoa.vnecdn.net/2022/01/12/DSC6568-1641990320.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=skJzVOYR2js7WqY3gYt7Eg">  -->
+    </div>
+  </section>
+</div>   
+<div class="container">
+  <div class="product" *ngFor="let item of cart.arr">
+    <div class="image-product">
+      <img [src]="item.image" (click)="opendetaildialog()">
+    </div>
+    <div class="information-product">
+      <div class="name-product">
+        <p>{{item.product_name}}</p>
+      </div>
+      <div class="sell">
+        <p>{{item.price}}</p>
+        <div class="name-product">
+          <button (click)="cart.addtocart(item)">Add to cart</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- [routerLink]="['/shoppingcart'] -->
+
+
+
+
+  <!-- The Modal  -->
+   <!-- <div #myModal class="modal"> -->
+
+    <!-- Modal content -->
+    <!-- <div class="modal-content">
+      <span class="close" (click)="closeDialog()">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+
+  </div> -->
+</div>
