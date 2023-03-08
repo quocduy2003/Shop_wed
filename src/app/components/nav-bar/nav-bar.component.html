@@ -1,20 +1,23 @@
-    <div class="header">
-    <div class="left">
-       <div class="logo">
-        <a [routerLink]="['']"><img  src="../../../assets/photo/shop_dt (1).png" ></a>
-      </div>
-      <div class="menu">
-        <li>Categories</li>
-        <li>Deals</li>
-        <li>What's New</li>
-        <li>Policy Warranty</li>
-        <li>Help</li>
-      </div>
+<div class="header">
+  <div class="left">
+    <div class="logo">
+      <a [routerLink]="['']"><img src="../../../assets/photo/shop_dt (1).png"></a>
     </div>
-      <div class="header-right">
-        <input type="text" placeholder="Search....">
-        <p>Eng</p>
-        <p>Login</p>
-        <mat-icon (click)="navagiteToCart()">add_shopping_cart</mat-icon>
-      </div>
+    <div class="menu">
+      <li>Categories</li>
+      <li>Deals</li>
+      <li>What's New</li>
+      <li>Policy Warranty</li>
+      <li>Help</li>
     </div>
+  </div>
+  <div class="header-right">
+    <input type="text" placeholder="Search....">
+    <p>Eng</p>
+    <button *ngIf="authService.currentUser == null" (click)="authService.login()">Login</button>
+    <button *ngIf="authService.currentUser != null" (click)="authService.logout()">Logout</button>
+    <img *ngIf="authService.currentUser" [src]="authService.currentUser.photoURL"
+      style="border-radius: 30px;height: 50px;margin:5%;" />
+    <mat-icon (click)="navagiteToCart()">add_shopping_cart</mat-icon>
+  </div>
+</div>

@@ -11,22 +11,22 @@
                 <h2>{{item.product_name}}</h2>
                 <p>{{item.price}}</p>
                 <div class="quantity">
-                    <button>+</button>
+                    <button (click)="increase()">+</button>
                     <p>{{item.quantity}}</p>
-                    <button>-</button>
+                    <button (click)="decrease()">-</button>
                 </div>
             </div>
             <div class="total-price">
                 <span>Thành tiền</span>
                 <p>{{item.price*item.quantity}} VNĐ</p>
             </div>
-            <button (click)="this.shoppingcart.amount()" class="assert">Xác nhận</button>
         </div>
     </div>
+    <button (click)="ThanhTien()" class="assert">Xác nhận</button>
     <div *ngIf="this.shoppingcart.cart.length != 0">
         <div class="order-card-block">
         <p>Thông tin đơn hàng</p>
-        <p>Tổng tiền:{{this.shoppingcart.total}} VNĐ</p>
+        <p>Tổng tiền:{{payment}} VNĐ</p>
         <button>Thanh Toán</button>
     </div>
     </div>

@@ -14,7 +14,6 @@ export class CardComponent {
 
 
   constructor(private renderer: Renderer2,public cart:ShoppingcartService,public dialog:MatDialog) {
-    console.log(this.item_detail_dialog)
   }
 
   ngAfterViewInit(): void {

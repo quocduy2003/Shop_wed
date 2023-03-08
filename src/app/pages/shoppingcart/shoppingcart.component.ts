@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ShoppingcartService } from 'src/app/services/shoppingcart.service';
 
 @Component({
@@ -9,6 +9,23 @@ import { ShoppingcartService } from 'src/app/services/shoppingcart.service';
 export class ShoppingcartComponent {
 
   constructor(public shoppingcart:ShoppingcartService){
-    
+
+  }
+  public payment=0;
+  
+  public ThanhTien(){
+    this.payment = this.shoppingcart.amount();
+    // alert(this.payment)
+  }
+
+  public total = 0;
+  public increase(){
+    this.shoppingcart.cart.quantity++;
+    this.total = this.shoppingcart.cart.quantity * this.shoppingcart.cart.price;
+    console.log(this.total)
+  }
+  public decrease(){
+    this.shoppingcart.cart.quantity--;
+    this.total = this.shoppingcart.cart.quantity * this.shoppingcart.cart.price;
   }
 }

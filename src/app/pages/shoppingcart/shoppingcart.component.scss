@@ -21,7 +21,7 @@
     height: 100px;
 }
 .heading p{
-    margin: 0;
+    margin-top: 5%;
     color: #002F49;
     font-size: 30px;
     font-weight: 700;
@@ -108,10 +108,13 @@
     background-color: rgb(119, 173, 243);
 }
 .assert{
-        font-size: 10px;
+        font-size: 20px;
         border: none;
         border-radius: 15px;
-        margin-top: 5px;    
+        margin: 5% 50%;
+        width: 150px;
+        height: 50px;
+        background-color: #ABAFB2;
 }
 .assert:hover{
     cursor: pointer;

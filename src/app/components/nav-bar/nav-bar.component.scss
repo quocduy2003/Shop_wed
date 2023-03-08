@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #D0D0D0;
+    position: relative;
 }
 
 .left{
@@ -51,7 +52,7 @@ li{
     align-items: center;
 }
 .header-right{
-    width: 500px;
+    width: 561px;
     display: flex;
     align-items: center;
 }

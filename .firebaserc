@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "day-08": {
+      "hosting": {
+        "Sales_Wedsite": [
+          "day-08"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "day-08"
+  }
+}
